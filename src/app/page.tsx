@@ -1,15 +1,12 @@
 import { EducationEntry } from "@/components/education-entry";
 import { educationData } from "@/data/education";
-import { PublicationEntry } from "@/components/publication-entry";
-import { publicationData } from "@/data/publication";
+
 import { ProfileSection } from "@/components/profile-section";
 import { aboutMe } from "@/data/aboutme";
-import { NewsEntry } from "@/components/news-entry";
-import { newsData } from "@/data/news";
+
 import { ExperienceEntry } from "@/components/experience-entry";
 import { experienceData } from "@/data/experience";
-import { PortfolioEntry } from "@/components/portfolio-entry";
-import { portfolioData } from "@/data/portfolio";
+
 import { sectionOrder, Section } from "@/data/section-order";
 import { SkillsEntry } from "@/components/skills-entry";
 import { skillsData } from "@/data/skills";
