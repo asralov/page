@@ -2,10 +2,7 @@ import Image from "next/image";
 import {
   Github,
   Linkedin,
-  Mail,
-  Twitter,
-  ArrowUpRight,
-  GraduationCap,
+  Mail
 } from "lucide-react";
 import { AboutMe } from "@/data/aboutme";
 
