@@ -50,11 +50,6 @@ export default function RootLayout({
               <p>
                 © {new Date().getFullYear()} {aboutMe.name}.
               </p>
-              {aboutMe.secretDescription && (
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4">
-                  {aboutMe.secretDescription}
-                </p>
-              )}
             </div>
             <div className="mb-4">
               <p className="text-sm text-neutral-500 dark:text-neutral-500 justify">

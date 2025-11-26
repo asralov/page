@@ -11,6 +11,8 @@ import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
+import { SkillsEntry } from "@/components/skills-entry";
+import { skillsData } from "@/data/skills";
 
 export default function Home() {
   return (
@@ -43,23 +45,23 @@ export default function Home() {
             {sectionOrder.map((sectionName) => {
               // Most of this is redundant... but in case it needs to be unique.
               switch (sectionName) {
-                case Section.News:
-                  return (
-                    newsData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          News
-                        </h2>
-                        <div className="space-y-12">
-                          {newsData.map((news, index) => (
-                            <div key={index}>
-                              <NewsEntry news={news} />
-                            </div>
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
+                // case Section.News:
+                //   return (
+                //     newsData.length > 0 && (
+                //       <section key={sectionName}>
+                //         <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                //           News
+                //         </h2>
+                //         <div className="space-y-12">
+                //           {newsData.map((news, index) => (
+                //             <div key={index}>
+                //               <NewsEntry news={news} />
+                //             </div>
+                //           ))}
+                //         </div>
+                //       </section>
+                //     )
+                //   );
                 case Section.Education:
                   return (
                     educationData.length > 0 && (
@@ -75,26 +77,26 @@ export default function Home() {
                       </section>
                     )
                   );
-                case Section.Publication:
-                  return (
-                    publicationData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          Publications
-                        </h2>
-                        <div className="space-y-12">
-                          {publicationData.map((publication, index) => (
-                            <div key={index}>
-                              <PublicationEntry publication={publication} />
-                              {index < publicationData.length - 1 && (
-                                <div className="h-px bg-zinc-200 my-8" />
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </section>
-                    )
-                  );
+                // case Section.Publication:
+                //   return (
+                //     publicationData.length > 0 && (
+                //       <section key={sectionName}>
+                //         <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                //           Publications
+                //         </h2>
+                //         <div className="space-y-12">
+                //           {publicationData.map((publication, index) => (
+                //             <div key={index}>
+                //               <PublicationEntry publication={publication} />
+                //               {index < publicationData.length - 1 && (
+                //                 <div className="h-px bg-zinc-200 my-8" />
+                //               )}
+                //             </div>
+                //           ))}
+                //         </div>
+                //       </section>
+                //     )
+                //   );
                 case Section.Experience:
                   return (
                     experienceData.length > 0 && (
@@ -113,21 +115,37 @@ export default function Home() {
                       </section>
                     )
                   );
-                case Section.Portfolio:
+                case Section.Skills:
                   return (
-                    portfolioData.length > 0 && (
-                      <section key={sectionName}>
+                    <section key={sectionName}>
                         <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
-                          Portfolio
+                          Skills
                         </h2>
                         <div className="space-y-12">
-                          {portfolioData.map((portfolio, index) => (
-                            <PortfolioEntry key={index} portfolio={portfolio} />
+                            {skillsData.map((skills, index) => (
+                            <SkillsEntry
+                              key={index}
+                              skills={skills}
+                            />
                           ))}
                         </div>
-                      </section>
-                    )
+                    </section>
                   );
+                // case Section.Portfolio:
+                //   return (
+                //     portfolioData.length > 0 && (
+                //       <section key={sectionName}>
+                //         <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                //           Portfolio
+                //         </h2>
+                //         <div className="space-y-12">
+                //           {portfolioData.map((portfolio, index) => (
+                //             <PortfolioEntry key={index} portfolio={portfolio} />
+                //           ))}
+                //         </div>
+                //       </section>
+                //     )
+                //   );
                 default:
                   return null;
               }

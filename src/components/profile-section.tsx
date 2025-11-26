@@ -37,11 +37,6 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
         <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
           {aboutMe.name}
         </h1>
-        {aboutMe.altName && (
-          <p className="text-zinc-600 text-md leading-relaxed tracking-wide mb-6">
-            {aboutMe.altName}
-          </p>
-        )}
         <p className="text-zinc-600 text-xs leading-relaxed tracking-wide uppercase mb-6">
           {aboutMe.title}
           <br />
@@ -59,7 +54,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
           )}
         </p>
         <div className="flex gap-6 mb-6">
-          {aboutMe.blogUrl && (
+          {/* {aboutMe.blogUrl && (
             <a
               href={aboutMe.blogUrl}
               className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
@@ -86,7 +81,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               />
               <span className="tracking-wider uppercase">CV</span>
             </a>
-          )}
+          )} */}
         </div>
         <div className="space-y-2">
           <a
@@ -98,7 +93,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
             <Mail size={14} />
             {aboutMe.email}
           </a>
-          {aboutMe.googleScholarUrl && (
+          {/* {aboutMe.googleScholarUrl && (
             <>
               <br />
               <a
@@ -124,7 +119,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
                 <Twitter size={14} />@{aboutMe.twitterUsername}
               </a>
             </>
-          )}
+          )} */}
           {aboutMe.githubUsername && (
             <>
               <br />
