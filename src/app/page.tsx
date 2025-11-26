@@ -13,6 +13,46 @@ import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
 import { SkillsEntry } from "@/components/skills-entry";
 import { skillsData } from "@/data/skills";
+import { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://asralov.dev'), // ← your custom domain
+  title: 'Abrorjon Asralov | Portfolio',
+  description: 'Portfolio of Abrorjon Asralov, Senior Computer Science student, showcasing web development, games, AI projects, and software engineering skills.',
+  keywords: [
+    'Abrorjon Asralov',
+    'Portfolio',
+    'Web Development',
+    'Games',
+    'Software Engineering',
+    'AI',
+    'React',
+    'Next.js',
+    'JavaScript',
+    'TypeScript'
+  ],
+  authors: [{ name: 'Abrorjon Asralov' }],
+  openGraph: {
+    title: 'Abrorjon Asralov | Portfolio',
+    description: 'Portfolio of Abrorjon Asralov, Senior Computer Science student, showcasing web development, games, AI projects, and software engineering skills.',
+    url: '/portfolio', // relative to metadataBase
+    siteName: 'Abrorjon Portfolio',
+    images: [
+      {
+        url: '/preview.png', // located in public/
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
+}
+
+
+
 
 export default function Home() {
   return (
@@ -153,6 +193,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Analytics/>
+      <SpeedInsights/>
     </div>
   );
 }
